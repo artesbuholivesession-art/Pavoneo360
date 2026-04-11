@@ -6,7 +6,7 @@
 <title>Pavoneo 360° — Artes Búho</title>
   <meta property="og:title" content="Pavoneo 360° — Artes Búho">
   <meta property="og:description" content="El método para conectar artistas con su público. Grabación, contenido y lanzamiento con impacto real.">
-  <meta property="og:image" content="https://artesbuholivesession-art.github.io/Pavoneo360/pavoneo360-og.jpg">
+  <meta property="og:url" content="https://artesbuho.com/pavoneo-360/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="description" content="Pavoneo 360° — Artes Búho. Método estructurado para artistas.">
@@ -338,6 +338,152 @@
     color: var(--cyan);
     flex-shrink: 0;
     margin-top: .1rem;
+  }
+
+  /* ── SHORTS SECTION ── */
+  .shorts-section {
+    background: var(--dark3);
+    padding: 5rem 8vw;
+  }
+  .shorts-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5rem;
+    align-items: center;
+  }
+  .shorts-text .section-title { margin-bottom: 1.2rem; }
+  .shorts-text p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,.7);
+    margin-bottom: 1.5rem;
+    max-width: 460px;
+  }
+  .shorts-perks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .shorts-perks li {
+    font-size: .9rem;
+    font-weight: 300;
+    color: rgba(255,255,255,.7);
+    display: flex;
+    gap: .6rem;
+  }
+  .shorts-video-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  /* Shorts = vertical 9:16 */
+  .shorts-frame {
+    position: relative;
+    width: 260px;
+    padding-bottom: calc(260px * 16/9);
+    background: #000;
+    border: 1px solid rgba(0,180,216,.15);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .shorts-frame::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 32px; height: 32px;
+    border-top: 2px solid var(--cyan);
+    border-left: 2px solid var(--cyan);
+    pointer-events: none;
+    z-index: 3;
+  }
+  .shorts-frame .video-corner-br {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 32px; height: 32px;
+    border-bottom: 2px solid var(--yellow);
+    border-right: 2px solid var(--yellow);
+    pointer-events: none;
+    z-index: 3;
+  }
+  .shorts-frame .video-poster {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  .shorts-badge {
+    display: flex;
+    gap: .5rem;
+  }
+  .shorts-badge span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: .25rem .7rem;
+    border-radius: 2px;
+  }
+  .shorts-badge span:first-child {
+    background: rgba(245,200,0,.15);
+    color: var(--yellow);
+    border: 1px solid rgba(245,200,0,.3);
+  }
+  .shorts-badge span:last-child {
+    background: rgba(0,180,216,.1);
+    color: var(--cyan);
+    border: 1px solid rgba(0,180,216,.2);
+  }
+  @media (max-width: 900px) {
+    .shorts-inner { grid-template-columns: 1fr; }
+    .shorts-video-wrap { align-items: flex-start; }
+    .shorts-frame { width: 200px; padding-bottom: calc(200px * 16/9); }
+  }
+
+  /* ── LIVE SESSION EXAMPLES ── */
+  .livex-section {
+    background: var(--dark2);
+    padding: 6rem 8vw;
+  }
+  .livex-section .section-title { margin-bottom: .8rem; }
+  .livex-intro {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,.65);
+    line-height: 1.8;
+    max-width: 580px;
+    margin-bottom: 3.5rem;
+  }
+  .livex-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .livex-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .livex-info { display: flex; flex-direction: column; gap: .4rem; }
+  .livex-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--yellow);
+  }
+  .livex-desc {
+    font-size: .88rem;
+    font-weight: 300;
+    color: rgba(255,255,255,.6);
+    line-height: 1.6;
+  }
+  @media (max-width: 900px) {
+    .livex-grid { grid-template-columns: 1fr; }
   }
 
   /* ── PACKS ── */
@@ -1565,6 +1711,109 @@
   </div>
 </section>
 
+<!-- ══════════════════ TESTIMONIO ══════════════════ -->
+<section class="shorts-section reveal">
+  <div class="shorts-inner">
+    <div class="shorts-text">
+      <div class="section-label">Lo que dicen</div>
+      <h2 class="section-title">Artistas que<br>ya se <span style="color:var(--yellow)">pavonean</span></h2>
+      <p>Esto no es publicidad. Es lo que dicen los artistas que han pasado por el método Pavoneo 360° y han transformado su carrera musical con nosotros.</p>
+      <ul class="shorts-perks">
+        <li><span style="color:var(--cyan)">▸</span> Resultados reales, artistas reales</li>
+        <li><span style="color:var(--cyan)">▸</span> Más de 20 artistas en la comunidad</li>
+        <li><span style="color:var(--cyan)">▸</span> Método probado y estructurado</li>
+      </ul>
+    </div>
+    <div class="shorts-video-wrap">
+      <div class="shorts-frame">
+        <div class="video-corner-br"></div>
+        <a class="video-poster"
+           href="https://www.youtube.com/shorts/WQc68uUDjL8"
+           target="_blank"
+           rel="noopener"
+           style="background-image:url('https://img.youtube.com/vi/WQc68uUDjL8/hqdefault.jpg')">
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="video-label">Ver testimonio →</span>
+        </a>
+      </div>
+      <div class="shorts-badge">
+        <span>★ Testimonio real</span>
+        <span>Comunidad Artes Búho</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ LIVE SESSION EXAMPLES ══════════════════ -->
+<section class="livex-section reveal">
+  <div class="section-label">Ejemplos reales</div>
+  <h2 class="section-title">Así grabamos las<br><span style="color:var(--yellow)">Live Sessions</span></h2>
+  <p class="livex-intro">Producción multicámara profesional adaptada a cada artista. Desde bandas completas hasta formatos íntimos — siempre con el mismo nivel de calidad.</p>
+
+  <div class="livex-grid">
+
+    <div class="livex-card">
+      <div class="video-embed-wrap">
+        <div class="video-corner-br"></div>
+        <a class="video-poster"
+           href="https://www.youtube.com/watch?v=LEG4tNJHOFE"
+           target="_blank" rel="noopener"
+           style="background-image:url('https://img.youtube.com/vi/LEG4tNJHOFE/maxresdefault.jpg')">
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="video-label">Ver en YouTube →</span>
+        </a>
+      </div>
+      <div class="livex-info">
+        <span class="livex-tag">Banda completa</span>
+        <p class="livex-desc">Trae a todos los músicos. Grabamos en directo con multicámara para capturar la energía del grupo al completo.</p>
+      </div>
+    </div>
+
+    <div class="livex-card">
+      <div class="video-embed-wrap">
+        <div class="video-corner-br"></div>
+        <a class="video-poster"
+           href="https://www.youtube.com/watch?v=tNgHLc4nxcY"
+           target="_blank" rel="noopener"
+           style="background-image:url('https://img.youtube.com/vi/tNgHLc4nxcY/maxresdefault.jpg')">
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="video-label">Ver en YouTube →</span>
+        </a>
+      </div>
+      <div class="livex-info">
+        <span class="livex-tag">Formatos especiales</span>
+        <p class="livex-desc">Producciones con puesta en escena cuidada, iluminación y ambientación personalizada según el estilo del artista.</p>
+      </div>
+    </div>
+
+    <div class="livex-card">
+      <div class="video-embed-wrap">
+        <div class="video-corner-br"></div>
+        <a class="video-poster"
+           href="https://www.youtube.com/watch?v=L0L9mLqTxz4"
+           target="_blank" rel="noopener"
+           style="background-image:url('https://img.youtube.com/vi/L0L9mLqTxz4/maxresdefault.jpg')">
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="video-label">Ver en YouTube →</span>
+        </a>
+      </div>
+      <div class="livex-info">
+        <span class="livex-tag">Formato íntimo</span>
+        <p class="livex-desc">Para artistas en solitario o dúos. Enfoque cercano que conecta directamente con la audiencia digital.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ══════════════════ PACKS ══════════════════ -->
 <section class="packs" id="packs">
   <div class="packs-header reveal">
@@ -2249,9 +2498,9 @@
       <h4>Datos Bancarios para la Transferencia</h4>
       <div class="iban-box">
         <span style="font-size:.72rem;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;font-family:'Barlow Condensed',sans-serif">Titular</span>
-        <strong style="margin-bottom:.6rem">[ David Monsalve Rivera ]</strong>
+        <strong style="margin-bottom:.6rem">[ RAZÓN SOCIAL — completar ]</strong>
         <span style="font-size:.72rem;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;font-family:'Barlow Condensed',sans-serif;margin-top:.4rem">IBAN</span>
-        <strong>[ ES31 2100 4514 7813 0024 8527 ]</strong>
+        <strong>[ ES00 0000 0000 00 0000000000 — completar ]</strong>
         <p style="margin-top:.6rem;font-size:.8rem;color:var(--gray)">Concepto: <strong style="color:var(--white)">PAVONEO360 · ${name}</strong></p>
       </div>
       <h4>Condiciones</h4>
